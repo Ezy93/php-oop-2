@@ -26,7 +26,7 @@
          * @param  int $telephoneNumber
          * @return void
          */
-        public function __construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
+        function __construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
         {
             $this->name = $name;
             $this->surname = $surname;
