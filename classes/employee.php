@@ -13,5 +13,17 @@
             $this->role = $role;
             parent::__construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber);
         }
+
+        public function getEmplyeedID(){
+            return $this->employeeID;
+        }
+
+        public function getLevel(){
+            return $this->level;
+        }
+
+        public function getRole(){
+            return $this->role;
+        }
     }
 ?>
