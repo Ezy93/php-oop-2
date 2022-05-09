@@ -6,12 +6,12 @@
         private $level;
         private $role;
 
-        function __construct($employeeID ,$level ,$role ,$name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
+        function __construct($employeeID ,$level ,$role ,$name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber ,$creditCardNo)
         {
             $this->employeeID = $employeeID;
             $this->level = $level;
             $this->role = $role;
-            parent::__construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber);
+            parent::__construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber ,$creditCardNo );
         }
 
         public function getEmplyeedID(){

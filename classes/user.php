@@ -11,7 +11,7 @@
         private $email;
         private $telephoneNumber;
         private $discount;
-                
+        protected $creditCardNo;
                 
         /**
          * __construct
@@ -26,7 +26,7 @@
          * @param  int $telephoneNumber
          * @return void
          */
-        function __construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
+        function __construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber, $creditCardNo)
         {
             $this->name = $name;
             $this->surname = $surname;
@@ -51,6 +51,7 @@
             if ($this->isRegistered) {
                 $this->discount = 20;
             }
+            $this->creditCardNo = $creditCardNo;
         }
         
         /**
