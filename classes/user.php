@@ -37,6 +37,30 @@
             }
             return "utente non registrato";
         }
+
+        public function getIsRegistered(){
+            return $this->isRegistered;
+        }
+
+        public function getHostID(){
+            return $this->hostID;
+        }
+
+        public function getIsEmployee(){
+            return $this->isEmployee;
+        }
+
+        public function getAddress(){
+            return $this->address;
+        }
+
+        public function getemail(){
+            return $this->email;
+        }
+
+        public function getTelephoneNumber(){
+            return $this->telephoneNumber;
+        }
     }
     
 ?>
