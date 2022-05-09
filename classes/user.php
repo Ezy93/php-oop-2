@@ -8,7 +8,18 @@
         private $address;
         private $email;
         private $telephoneNumber;
-        
+                
+        /**
+         * __construct
+         *
+         * @param  string $userName
+         * @param  string $password
+         * @param  bool $isEmployee
+         * @param  string $address
+         * @param  string $email
+         * @param  int $telephoneNumber
+         * @return void
+         */
         public function __construct($userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
         {
             $this->userName = $userName;
@@ -30,34 +41,69 @@
             $this->email = $email;
             $this->telephoneNumber = $telephoneNumber;
         }
-
+        
+        /**
+         * getUserName
+         *
+         * @return string
+         */
         public function getUserName(){
             if($this->userName != null){
                 return $this->userName;
             }
             return "utente non registrato";
         }
-
+        
+        /**
+         * getIsRegistered
+         *
+         * @return bool
+         */
         public function getIsRegistered(){
             return $this->isRegistered;
         }
-
+        
+        /**
+         * getHostID
+         *
+         * @return int
+         */
         public function getHostID(){
             return $this->hostID;
         }
-
+        
+        /**
+         * getIsEmployee
+         *
+         * @return bool
+         */
         public function getIsEmployee(){
             return $this->isEmployee;
         }
-
+        
+        /**
+         * getAddress
+         *
+         * @return string
+         */
         public function getAddress(){
             return $this->address;
         }
-
+        
+        /**
+         * getemail
+         *
+         * @return string
+         */
         public function getemail(){
             return $this->email;
         }
-
+        
+        /**
+         * getTelephoneNumber
+         *
+         * @return int
+         */
         public function getTelephoneNumber(){
             return $this->telephoneNumber;
         }
