@@ -10,10 +10,14 @@
         private $address;
         private $email;
         private $telephoneNumber;
+        private $discount;
+                
                 
         /**
          * __construct
          *
+         * @param  string $name
+         * @param  string $surname
          * @param  string $userName
          * @param  string $password
          * @param  bool $isEmployee
@@ -44,6 +48,9 @@
             $this->address = $address;
             $this->email = $email;
             $this->telephoneNumber = $telephoneNumber;
+            if ($this->isRegistered) {
+                $this->discount = 20;
+            }
         }
         
         /**
@@ -128,6 +135,15 @@
          */
         public function getTelephoneNumber(){
             return $this->telephoneNumber;
+        }
+        
+        /**
+         * getDiscount
+         *
+         * @return int
+         */
+        public function getDiscount(){
+            return $this->discount;
         }
     }
     
