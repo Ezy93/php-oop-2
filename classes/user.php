@@ -9,7 +9,7 @@
         private $email;
         private $telephoneNumber;
         
-        public function __construct($userName = "" ,$password = "" ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
+        public function __construct($userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
         {
             $this->userName = $userName;
             $this->password = $password;
@@ -31,7 +31,12 @@
             $this->telephoneNumber = $telephoneNumber;
         }
 
-        
+        public function getUserName(){
+            if($this->userName != null){
+                return $this->$userName;
+            }
+            return "utente non registrato";
+        }
     }
     
 ?>
