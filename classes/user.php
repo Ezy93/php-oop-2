@@ -1,5 +1,7 @@
 <?php  
     class User {
+        private $name;
+        private $surname;
         private $userName;
         protected $password;
         private $isRegistered;
@@ -20,8 +22,10 @@
          * @param  int $telephoneNumber
          * @return void
          */
-        public function __construct($userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
+        public function __construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber)
         {
+            $this->name = $name;
+            $this->surname = $surname;
             $this->userName = $userName;
             $this->password = $password;
             if ($userName && $password == null) {
@@ -40,6 +44,24 @@
             $this->address = $address;
             $this->email = $email;
             $this->telephoneNumber = $telephoneNumber;
+        }
+        
+        /**
+         * getName
+         *
+         * @return string
+         */
+        public function getName(){
+            return $this->name;
+        }
+        
+        /**
+         * getSurname
+         *
+         * @return string
+         */
+        public function getSurname(){
+            return $this->surname;
         }
         
         /**
