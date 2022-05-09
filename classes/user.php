@@ -33,7 +33,7 @@
 
         public function getUserName(){
             if($this->userName != null){
-                return $this->$userName;
+                return $this->userName;
             }
             return "utente non registrato";
         }
