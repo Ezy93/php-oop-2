@@ -26,7 +26,7 @@
          * @param  bool $isEmployee
          * @param  string $address
          * @param  string $email
-         * @param  int $telephoneNumber
+         * @param  string $telephoneNumber
          * @param  object $creditCardList
          * @return void
          */
@@ -58,6 +58,100 @@
             $this->creditCardList = $creditCardList;
             
         }
+
+        /* METODI SETTER */
+        
+        /**
+         * setName
+         *
+         * @param  string $name
+         * @return void
+         */
+        public function setName($name){
+            $this->name = $name;
+        }
+        
+        /**
+         * setSurname
+         * 
+         * @param  string $surname
+         * @return void
+         */
+        public function setSurname($surname){
+            $this->surname = $surname;
+        }
+        
+        /**
+         * setUsername
+         *
+         * @param  string $userName
+         * @return void
+         */
+        public function setUsername($userName){
+            $this->userName = $userName;
+        }
+        
+        /**
+         * setPassword
+         *
+         * @param  string $password
+         * @return void
+         */
+        public function setPassword($password){
+            $this->password = $password;
+        }
+        
+        /**
+         * setIsEmployee
+         *
+         * @param  bool $isEmployee
+         * @return void
+         */
+        public function setIsEmployee($isEmployee){
+            $this->isEmployee = $isEmployee;
+        }
+        
+        /**
+         * setAddress
+         *
+         * @param  string $address
+         * @return void
+         */
+        public function setAddress($address){
+            $this->address = $address;
+        }
+        
+        /**
+         * setEmail
+         *
+         * @param  string $email
+         * @return void
+         */
+        public function setEmail($email){
+            $this->email = $email;
+        }
+        
+        /**
+         * setTelephoneNumber
+         *
+         * @param  string $telephoneNumber
+         * @return void
+         */
+        public function setTelephoneNumber($telephoneNumber){
+            $this->telephoneNumber = $telephoneNumber;
+        }
+        
+        /**
+         * setCreditCard
+         *
+         * @param  object $creditCard
+         * @return void
+         */
+        public function setCreditCard($creditCard){
+            $this->creditCardList[] = $creditCard;
+        }
+        
+        /* METODI GETTER */
         
         /**
          * getName
@@ -137,7 +231,7 @@
         /**
          * getTelephoneNumber
          *
-         * @return int
+         * @return string
          */
         public function getTelephoneNumber(){
             return $this->telephoneNumber;
@@ -150,6 +244,15 @@
          */
         public function getDiscount(){
             return $this->discount;
+        }
+        
+        /**
+         * getCreditCardList
+         *
+         * @return array[object]
+         */
+        public function getCreditCardList(){
+            return $this->creditCardList;
         }
     }
     
