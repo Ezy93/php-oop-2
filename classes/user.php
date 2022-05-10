@@ -1,5 +1,6 @@
 <?php  
-    class User {
+    include_once __DIR__."/creditCard.php";
+    class User extends CreditCard{
         private $name;
         private $surname;
         private $userName;
@@ -11,7 +12,7 @@
         private $email;
         private $telephoneNumber;
         private $discount;
-        protected $creditCardNo;
+        
                 
         /**
          * __construct
@@ -26,8 +27,9 @@
          * @param  int $telephoneNumber
          * @return void
          */
-        function __construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber, $creditCardNo)
+        function __construct($name ,$surname ,$userName = null ,$password = null ,$isEmployee=false ,$address ,$email ,$telephoneNumber,$cardNumber ,$cardCVV ,$cardExpire ,$cardOwner)
         {
+            parent::__construct($cardNumber ,$cardCVV ,$cardExpire ,$cardOwner);
             $this->name = $name;
             $this->surname = $surname;
             $this->userName = $userName;
@@ -51,7 +53,7 @@
             if ($this->isRegistered) {
                 $this->discount = 20;
             }
-            $this->creditCardNo = $creditCardNo;
+            
         }
         
         /**
