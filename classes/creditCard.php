@@ -53,11 +53,12 @@
          *
          * @return bool
          */
-        public function setIsExpire(){
-            if(strtotime($this->cardExpireDate) < strtotime(date("d-m-y"))){ 
-                return $this->isExpired = false;
+        /* controllare questa funzione perchè non va bene da sempre true */
+        public function setIsExpire($creditCard){
+            if(strtotime($creditCard->cardExpireDate) < strtotime(date("d/m/y"))){ 
+                return $creditCard->isExpired = true;
             }
-            return $this->isExpired = true;
+            return $creditCard->isExpired = false;
         }
         
         /**
@@ -134,7 +135,7 @@
          * @return int
          */
         public function getCardID(){
-            return $this->cardId;
+            return $this->cardID;
         }
 
     }
