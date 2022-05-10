@@ -5,13 +5,15 @@
         private $cardExpireDate;
         private $cardOwner;
         private $isExpired;
+        private $cardID;
 
-        function __construct($cardNumber ,$cardCVV ,$cardExpireDate ,$cardOwner)
+        function __construct($cardNumber ,$cardCVV ,$cardExpireDate ,$cardOwner, $cardID)
         {
             $this->cardNumber = $cardNumber;
             $this->cardCVV = $cardCVV;
             $this->cardExpireDate = $cardExpireDate;
             $this->cardOwner = $cardOwner;
+            $this->cardID = $cardID;
         }
 
         public function getCardNumber(){
@@ -35,6 +37,10 @@
                 return $this->isExpired = false;
             }
             return $this->isExpired = true;
+        }
+
+        public function getCardID(){
+            return $this->cardId;
         }
 
     }
