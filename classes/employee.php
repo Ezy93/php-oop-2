@@ -9,14 +9,14 @@
         /**
          * __construct
          *
-         * @param  int $employeeID
-         * @param  int $level
+         * @param  int    $employeeID
+         * @param  int    $level
          * @param  string $role
          * @param  string $name
          * @param  string $surname
          * @param  string $userName
          * @param  string $password
-         * @param  bool $isEmployee
+         * @param  bool   $isEmployee
          * @param  string $address
          * @param  string $email
          * @param  string $telephoneNumber
@@ -63,7 +63,8 @@
         }
         
         
-        /* METODI GETTER */        
+        /* METODI GETTER */  
+        
         /**
          * getEmplyeedID
          *

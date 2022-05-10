@@ -16,9 +16,9 @@
          * @param  int $weigth
          * @return void
          */
-        function __construct($meatType ,$species ,$petSize ,$weigth ,$price ,$productCode ,$category ,$inStock)
+        function __construct($meatType ,$species ,$petSize ,$weigth ,$name ,$brand ,$price ,$productCode ,$category ,$inStock)
         {
-            parent::__construct($price ,$productCode ,$category ,$inStock);
+            parent::__construct($name ,$brand ,$price ,$productCode ,$category ,$inStock);
             $this->meatType = $meatType;
             $this->species = $species;
             $this->petSize = $petSize;
