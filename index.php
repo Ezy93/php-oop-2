@@ -8,6 +8,8 @@
     $employee = new Employee(10,3,'manager','fernando','ricucci','fernucci001','000000', true, 'via marconi, 10', 'ferni47@pippo.com','3335558877999');
     $user = new User('giovanni','bubbolo','efestus','dsadfadfsdvvsv',false,'via birba, 24','piripero@gnagna.com','33354458165468',new CreditCard('55550000044488','000','01/01/2020','giovanni','1'));
     $newCard = new CreditCard('12412414141','000','2022-05-12','ferni',10);
+    $newProduct = new Product('cicci','asfalt',15.99,450,'toys',125);
+    $newFood = new Food('manzo','dog','medium',15,'crocchette','purissi',15.99,899,'food',169)
     ?>
 
 <!DOCTYPE html>
@@ -20,11 +22,33 @@
     </head>
     <body>
     <?php  
-        echo $newCard->setIsExpire($newCard->cardExpireDate);
-        var_dump($newCard);
-        var_dump($employee);
-        var_dump($user);
-        var_dump(new DateTime())
+        $newCard->setIsExpire($newCard->cardExpireDate);
     ?>
+    
+    <?php
+        echo "<h1>Card Object:</h1>";  
+        var_dump($newCard);
+    ?>
+    <hr>
+    <?php
+        echo "<h1>Employee Object:</h1>";   
+        var_dump($employee);
+    ?>
+    <hr>
+    <?php  
+        echo "<h1>User Object:</h1>";
+        var_dump($user);
+    ?>
+    <hr>
+    <?php  
+        echo "<h1>Product Object:</h1>";
+        var_dump($newProduct);
+    ?>
+    <hr>
+    <?php  
+        echo "<h1>Food Object:</h1>";
+        var_dump($newFood);
+    ?>
+        
 </body>
 </html>

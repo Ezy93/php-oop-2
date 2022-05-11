@@ -7,6 +7,7 @@
         private $weigth;
 
                 
+                
         /**
          * __construct
          *
@@ -14,6 +15,12 @@
          * @param  string $species
          * @param  string $petSize
          * @param  int $weigth
+         * @param  string $name
+         * @param  string $brand
+         * @param  float $price
+         * @param  int $productCode
+         * @param  string $category
+         * @param  int $inStock
          * @return void
          */
         function __construct($meatType ,$species ,$petSize ,$weigth ,$name ,$brand ,$price ,$productCode ,$category ,$inStock)
