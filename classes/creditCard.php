@@ -2,7 +2,7 @@
     class CreditCard{
         private $cardNumber;
         private $cardCVV;
-        private $cardExpireDate;
+        public $cardExpireDate;
         private $cardOwner;
         private $isExpired;
         private $cardID;
@@ -54,11 +54,14 @@
          * @return bool
          */
         /* controllare questa funzione perchè non va bene da sempre true */
-        public function setIsExpire($creditCard){
-            if(strtotime($creditCard->cardExpireDate) < strtotime(date("d/m/y"))){ 
-                return $creditCard->isExpired = true;
+        public function setIsExpire($dateCard){
+            $now = new DateTime();
+            $cardDateTime = new DateTime("$dateCard"."00:00:00");
+            if($cardDateTime<$now){
+                $this->isExpired = true;
+            }else{
+                $this->isExpired = false;
             }
-            return $creditCard->isExpired = false;
         }
         
         /**

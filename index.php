@@ -7,7 +7,7 @@
 
     $employee = new Employee(10,3,'manager','fernando','ricucci','fernucci001','000000', true, 'via marconi, 10', 'ferni47@pippo.com','3335558877999');
     $user = new User('giovanni','bubbolo','efestus','dsadfadfsdvvsv',false,'via birba, 24','piripero@gnagna.com','33354458165468',new CreditCard('55550000044488','000','01/01/2020','giovanni','1'));
-    $newCard = new CreditCard('12412414141','000','12/12/2040','ferni',10);
+    $newCard = new CreditCard('12412414141','000','2022-05-12','ferni',10);
     ?>
 
 <!DOCTYPE html>
@@ -20,10 +20,11 @@
     </head>
     <body>
     <?php  
-        $newCard->setIsExpire($newCard);
+        echo $newCard->setIsExpire($newCard->cardExpireDate);
         var_dump($newCard);
         var_dump($employee);
         var_dump($user);
+        var_dump(new DateTime())
     ?>
 </body>
 </html>
